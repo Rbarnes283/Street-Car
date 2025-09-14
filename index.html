@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Adventure Game — Road Edition</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="topbar">
+    <h1>Adventure Game — Road Edition</h1>
+    <div id="controls">
+      <button id="pauseBtn">Pause</button>
+      <button id="restartBtn">Restart</button>
+      <span id="levelLabel" class="small">Level: 1</span>
+    </div>
+  </div>
+
+  <div id="character-select" class="center-card">
+    <h2>Select Your Character</h2>
+    <div class="choices">
+      <button class="charBtn" data-char="boy">Boy</button>
+      <button class="charBtn" data-char="girl">Girl</button>
+    </div>
+    <p class="hint">Use arrow keys or WASD to move. Press <strong>E</strong> to interact with NPCs. Collect all coins to complete a level.</p>
+  </div>
+
+  <canvas id="gameCanvas" width="900" height="500" tabindex="0"></canvas>
+
+  <div id="hud" class="overlay hidden">
+    <div id="stats">
+      <span id="score">Score: 0</span>
+      <span id="coins">Coins: 0</span>
+      <span id="lives">Lives: 3</span>
+      <span id="instruction">Press <strong>E</strong> to interact</span>
+    </div>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <button id="modalClose" class="modal-close">✕</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" src="https://cdn.pixabay.com/audio/2022/11/09/audio_d61a0a8071.mp3" loop></audio>
+
+  <script src="sidegames.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
